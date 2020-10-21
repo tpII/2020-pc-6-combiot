@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pdf417gen',
-    'usuario'
+    'usuario',
+    'turno',
+    'reserva'
 ]
 
 MIDDLEWARE = [
