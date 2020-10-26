@@ -25,3 +25,5 @@ urlpatterns = [
     #path('usuario/', include('usuario.urls')) si hacemos archivos urls en las apps
 ]
 
+
+# FALTA DEFINIR UNA ULR STATICA PARA QUE ENCUENTRE LA CARPETA DE IMAGENES

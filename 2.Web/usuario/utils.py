@@ -4,9 +4,9 @@ import os
 
 def codificador(data):
     # Convert to code words # columns default = 6, security_level default = 2
-    codes = encode(str(data), security_level=7)
+    codigo = encode(str(data), security_level=7)
 
     # Genera un codigo de barras como imagen
-    imagen = render_image(codes)
+    imagen = render_image(codigo)
     dir_save = os.path.dirname(os.path.abspath(__file__))
     imagen.save(dir_save + 'imagenes/codigo.jpg')

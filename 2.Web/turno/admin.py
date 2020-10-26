@@ -1,3 +1,4 @@
 from django.contrib import admin
+from turno.models import Turno
 
-# Register your models here.
+admin.site.register(Turno)

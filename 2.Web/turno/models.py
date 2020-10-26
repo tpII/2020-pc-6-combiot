@@ -1,3 +1,5 @@
 from django.db import models
 
-# Create your models here.
+class Turno(models.Model):
+    fecha = models.DateField()
+    hora = models.TimeField(auto_now_add=True)
