@@ -15,15 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from usuario.views import home
-#from django.conf.urls import include
+from reserva.views import home, decode, reservar, post, informar
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home),
-    #path('usuario/', include('usuario.urls')) si hacemos archivos urls en las apps
+    path('decodificacion/', decode),
+    path('nueva_reserva/', reservar),
+    path('reserva/', post, name='post'),
+    path('informacion/', informar),
 ]
-
-
-# FALTA DEFINIR UNA ULR STATICA PARA QUE ENCUENTRE LA CARPETA DE IMAGENES

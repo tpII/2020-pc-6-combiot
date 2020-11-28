@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nueva Reserva</title>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+
+        *{
+            box-sizing:border-box;
+        }
+        body{
+            background-color: #333333;
+        }
+        form{
+            margin: auto;
+            margin-top: 0px;
+            width:50%;
+            padding:16px;
+            border-radius:10px;
+            background-color:#ccc;
+        }
+
+        form label{
+            font-family: 'Roboto';
+            width:90px;
+            display:inline-block;
+        }
+        form input[type="date"],
+        form input[type="number"],
+        form input[type="text"],
+        form input[type="email"]{
+            width: 80%;
+            padding:3px 10px;
+            border:1px solid #f6f6f6;
+            border-radius:3px;
+            background-color:#f6f6f6;
+            margin:8px 0;
+            display:inline-block;
+            font-family: 'Roboto';
+        }
+
+        form input[type="submit"]{
+            width:100%;
+            padding:8px 16px;
+            margin-top:32px;
+            border:1px solid #000;
+            border-radius:5px;
+            display:block;
+            color:#fff;
+            background-color:#000;
+            font-family: 'Roboto';
+
+        } 
+
+        form input[type="submit"]:hover{
+            cursor:pointer;
+            font-family: 'Roboto';
+
+        }
+        h1{
+            margin: auto;
+            margin-top: 10%;
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Roboto';
+            color:#fff;
+
+            
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Formulario para solicitar un turno</h1>
+    <Form action = "http://127.0.0.1:8000/reserva/" method = "post"> 
+
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre" required/>
+        </div>
+        <div>
+            <label for="apellido">Apellido</label>
+            <input type="text" name="apellido" id="apellido" placeholder="1r Apellido" required/>
+        </div>
+
+        <div>
+            <label for="email" />Email</label>
+            <input type="email" name="email" id="email" placeholder="email" required />
+        </div>
+
+        <div>
+            <label for="DNI" />DNI</label>
+            <input type ="number" name="DNI" id="DNI" placeholder="Ingrese su DNI" required/>
+        </div>
+
+        <div>
+            <label for="fecha">Fecha de Reserva</label>
+            <input type="date" name="fecha" for="fecha" required step="1" min="2020-01-01" max="2020-12-31" />
+        </div>
+
+        <input type="submit" name="enviar" value="Enviar datos"/>
+    </form>
+</body>
+</html>
+
