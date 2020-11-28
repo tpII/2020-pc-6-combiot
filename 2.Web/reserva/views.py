@@ -12,12 +12,13 @@ def home(request):
 
 def decode(request):
     #data = deco()
-    data2 = deco2()
-    return render(request, 'deco.html', context={'data': data2})
+    data = deco2()
+    print(data)
+    return render(request, 'decodificacion.html', context={'data': data})
 
 
 def reservar(request):
-    return render(request, 'prueba.html', context={})
+    return render(request, 'nueva_reserva.html', context={})
 
 
 def informar(request):
