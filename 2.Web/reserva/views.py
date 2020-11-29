@@ -4,6 +4,8 @@ from django.views.generic import CreateView
 from .form import PostForm
 from django.http import HttpResponse
 from .models import Reserva
+from PIL import Image
+from combi.settings import MEDIA_ROOT
 
 
 def home(request):
@@ -23,7 +25,6 @@ def reservar(request):
 
 def informar(request):
     return render(request, 'info.html', context={})
-
 
 def post(request):
     if request.method == "POST":
