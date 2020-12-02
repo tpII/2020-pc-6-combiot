@@ -2,6 +2,7 @@ asgiref==3.2.10
 beautifulsoup4==4.9.3
 certifi==2020.11.8
 chardet==3.0.4
+DateTime==4.3
 Django==3.1.2
 future==0.18.2
 idna==2.10
@@ -15,5 +16,4 @@ requests==2.24.0
 soupsieve==2.0.1
 sqlparse==0.4.1
 urllib3==1.25.11
-
-
+zope.interface==5.2.0
