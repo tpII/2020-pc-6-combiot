@@ -4,7 +4,6 @@ import requests
 from bs4 import BeautifulSoup
 import ast
 from pyzxing import BarCodeReader
-from PIL import Image
 
 
 def codificador(data, reserva):
@@ -18,6 +17,7 @@ def codificador(data, reserva):
     reserva.save()
 
 
+# ALTERNATIVA con un decodificador online
 def deco():
     ff = [
         ('images', ('barcode.png', open(MEDIA_ROOT + '/barcode.png', 'rb'), 'image/png'))
@@ -37,7 +37,9 @@ def deco():
     return datos
 
 
+# ALTERNATIVA con Docker
 def deco2():
     reader = BarCodeReader()
     results = reader.decode(MEDIA_ROOT + '/barcode.png')
-    return results[0]['parsed']
+    datos = results[0]['parsed'].replace("'", "\"")
+    return ast.literal_eval(datos)

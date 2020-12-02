@@ -92,12 +92,12 @@
 
         <div>
             <label for="DNI" />DNI</label>
-            <input type ="number" name="DNI" id="DNI" placeholder="Ingrese su DNI" required/>
+            <input type ="number" name="DNI" id="DNI" placeholder="Ingrese su DNI" required min="10000000"/>
         </div>
 
         <div>
             <label for="fecha">Fecha de Reserva</label>
-            <input type="date" name="fecha" for="fecha" required step="1" min="2020-01-01" max="2020-12-31" />
+            <input type="date" name="fecha" for="fecha" required step="1" min="<?php echo date('Y-m-d');?>" />
         </div>
 
         <input type="submit" name="enviar" value="Enviar datos"/>

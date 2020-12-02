@@ -4,7 +4,7 @@
 
 # Descripción :minibus:
 
-Objetivo principal: Mejorar la calidad de la experiencia de los usuarios con los servicios de combi.
+Objetivo principal: Mejorar la calidad de la experiencia de los usuarios con los servicios de combi. 
 
 El proyecto consta de 2 partes que trabajan cooperativamente:
 
