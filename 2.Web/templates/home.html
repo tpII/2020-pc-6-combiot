@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" />
+
+    <title>Combi-IoT</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+</head>
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+}
+.derecha{
+    background: #333333;
+    height: 100vh;
+    width: 50%;
+
+}
+
+.izquierda{
+    background: url(https://aguiarbuenosaires.com/wp-content/uploads/2016/03/airpano_clarin1.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+
+}
+
+#pantalla-div{
+    display: flex;
+}
+.boton-r{
+    text-align: center;
+    font-size: 30px;
+    border: 4px solid #ffff;
+    padding: 30px;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    background-color: #9900ff;
+
+}
+.boton-is{
+    text-align: center;
+
+}
+
+.titulo{
+    color: #ffff;
+
+}
+.titulo2{
+    color: #2b78e4;
+    width: 50%;
+
+}
+
+
+
+h2{
+    font-size: 10px;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 80px;
+    margin-right: 60px;
+    text-align: right;
+    color: #ffff;
+    width: 50%;
+}
+
+h1{
+    font-size: 60px;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: auto;
+    text-align: center;
+    
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    font-family: 'Roboto';
+    color: #ffff;
+}
+</style>
+
+<body>
+<section id="pantalla-div">
+    <div class="izquierda">
+    </div>
+
+
+    <div class="derecha">
+       <span class="boton-is"><a href="http://127.0.0.1:8000/informacion/"><h2> INFORMACION</h2></span></a>
+        <h1><span class="titulo">Sistema de reservas</span> </h1>
+        <h1><span class="titulo2">Combi-IoT</span> </h1>
+        <div class="boton-r"><a href="http://127.0.0.1:8000/nueva_reserva/"><span class="b-r">Reservar</span></a>
+        </div>
+    </div>
+
+</section>
+
+
+</body>
+
+</html>

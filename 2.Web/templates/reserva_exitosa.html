@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reserva</title>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+
+        body{
+            background-color: #333333;
+        }
+        h1{
+            margin: auto;
+            margin-top: 2%;
+            font-size: 50px;
+            margin-bottom: 30px;
+            text-align: center;
+            font-family: 'Roboto';
+            color:#9900ff;
+        }
+        h2{
+            margin: auto;
+            margin-top: 10%;
+            font-size: 40px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Roboto';
+            color:#fff;
+
+        }
+        li::marker {
+          color: #9900ff;
+          font-size: 2rem;
+
+        }
+
+        ul{
+            font-family: 'Roboto';
+            font-size: 20px;
+            margin-left: 28%;
+            color: #fff;
+            margin-bottom: 50px;
+
+        }
+
+        .imagen{
+            margin-top: 2015%;
+            color:#fff;
+            text-align: center;
+            margin: auto;
+
+        }
+        h3{
+            font-family: 'Roboto';
+            font-size: 25px;
+        }
+        .datos{
+            text-align: center;
+            color:#9D70F7;
+            margin: auto;
+            background-color: #fff;
+        }
+        .info{
+            color:#fff;
+            text-align: center;
+            margin-top: 10px;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+            font-family: 'Roboto';
+            color: #ffff;
+        }
+        .boton-r{
+            text-align: center;
+            font-size: 20px;
+            border: 4px solid #ffff;
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin-left: 30%;
+            margin-right: 30%;
+            background-color: #9900ff;
+            }
+    </style>
+
+</head>
+<body>
+    <h1>¡Su reserva se ha realizado con exito!</h1>
+    {% block content %}
+
+    <ul>
+        <li>Nombre: {{ data.nombre }} </li>
+        <li>Apellido: {{ data.apellido }} </li>
+        <li>Fecha de reserva: {{ data.fecha }} </li>
+
+    </ul>
+
+    <span class="info"> <h3> CÓDIGO PDF417 disponible para descargar</h3></span>
+    <div class='imagen'>
+        <a href="/media/barcode.png" download="barcode.png">
+        <img src="/media/barcode.png" width="350" /></a>
+    </div>
+    <span class="info"> <h3>Para descargar el codigo hacer clic en la imagen</h3></span>
+    <span class="datos"> <h3> El CÓDIGO PDF417 le servirá como pasaje al ingresar en la combi. </h3></span>
+    <span class="info"><h3>Conservelo</h3> </span>
+    <div class="boton-r"><a href="http://127.0.0.1:8000/decodificacion/"><span class="b-r">Decodificar imagen</span></a>
+    </div>
+
+</body>
+{% endblock %}
+</html>
+
