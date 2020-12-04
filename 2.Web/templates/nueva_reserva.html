@@ -26,6 +26,7 @@
             width:90px;
             display:inline-block;
         }
+        form input[type="time"],
         form input[type="date"],
         form input[type="number"],
         form input[type="text"],
@@ -99,7 +100,10 @@
             <label for="fecha">Fecha de Reserva</label>
             <input type="date" name="fecha" for="fecha" required step="1" min="<?php echo date('Y-m-d');?>" />
         </div>
-
+        <div>
+            <label for="hora">Hora de Reserva</label>
+            <input type="time" name="hora" for="hora" required  />
+        </div>
         <input type="submit" name="enviar" value="Enviar datos"/>
     </form>
 </body>

@@ -17,8 +17,8 @@ def codificador(data, reserva):
     reserva.save()
 
 
-# ALTERNATIVA con un decodificador online
-def deco():
+# ALTERNATIVA con un decodificador online externo
+def decodificar_1():
     ff = [
         ('images', ('barcode.png', open(MEDIA_ROOT + '/barcode.png', 'rb'), 'image/png'))
     ]
@@ -37,8 +37,8 @@ def deco():
     return datos
 
 
-# ALTERNATIVA con Docker
-def deco2():
+# ALTERNATIVA pyzxing (Python + Java)
+def decodificar_2():
     reader = BarCodeReader()
     results = reader.decode(MEDIA_ROOT + '/barcode.png')
     datos = results[0]['parsed'].replace("'", "\"")

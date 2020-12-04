@@ -8,6 +8,7 @@ class Reserva(models.Model):
     DNI = models.IntegerField()
     fecha = models.DateField()
     email = models.EmailField(max_length=254)
+    hora = models.TimeField()
 
     def __str__(self):
         return str(self.apellido) + '-' + str(self.email) + ' ' + str(self.fecha)

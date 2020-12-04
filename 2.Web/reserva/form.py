@@ -11,5 +11,8 @@ class PostForm(forms.ModelForm):
             'apellido',
             'DNI',
             'fecha',
+            'hora',
             'email'
         ]
+
+
