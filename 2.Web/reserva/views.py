@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from reserva.utils import decodificar_1, decodificar_2, codificador
+from reserva.utils import decodificar_2, codificador
 from .form import PostForm
 from .models import Reserva
 from django.utils import timezone
@@ -41,18 +41,23 @@ def post(request):
                 return render(request, 'error_fecha.html', context={})
             else:
                 nueva_reserva.save()
-                reserva = Reserva.objects.filter(fecha=nueva_reserva.fecha, email=nueva_reserva.email).first()
+                reserva = Reserva.objects.get(
+                    fecha=nueva_reserva.fecha,
+                    email=nueva_reserva.email,
+                    nombre=nueva_reserva.nombre,
+                    apellido=nueva_reserva.apellido,
+                    DNI=nueva_reserva.DNI,
+                    hora=nueva_reserva.hora)
                 data = {
-                    'nombre': nueva_reserva.nombre,
-                    'apellido': nueva_reserva.apellido,
-                    'DNI': nueva_reserva.DNI,
-                    'fecha': str(nueva_reserva.fecha),
-                    'hora': str(nueva_reserva.hora),
-                    'email': nueva_reserva.email,
+                    'nombre': reserva.nombre,
+                    'apellido': reserva.apellido,
+                    'DNI': reserva.DNI,
+                    'fecha': str(reserva.fecha),
+                    'hora': str(reserva.hora),
+                    'email': reserva.email,
                 }
                 codificador(data, reserva)
                 data['imagen'] = reserva.codigo
                 reserva.save()
                 return render(request, 'reserva_exitosa.html', context={'data': data})
-        else:
-            return render(request, "home.html", context={})
+    return render(request, "home.html", context={})

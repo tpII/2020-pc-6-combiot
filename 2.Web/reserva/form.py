@@ -14,5 +14,3 @@ class PostForm(forms.ModelForm):
             'hora',
             'email'
         ]
-
-
