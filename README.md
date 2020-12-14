@@ -4,17 +4,18 @@
 
 # Descripción :minibus:
 
-Objetivo principal: Mejorar la calidad de la experiencia de los usuarios con los servicios de combi. 
+El proyecto Combi-IoT tiene como objetivo mejorar la calidad de la experiencia
+de los usuarios con el servicio de la combi, a través de un sistema que permita:
 
-El proyecto consta de 2 partes que trabajan cooperativamente:
 
-_Primera parte: Reserva del pasaje_
-- Servicio web para reserva de pasajes en un determinado turno de una combi.
-- La reserva esta representada por un codigo de barras pdf417, el cual servirá para validar el pasaje en la segunda parte.
+- __Reservar pasajes__ en una determinada fecha y hora elegida por el usuario, el
+cual accederá a la misma mediante un dispositivo con acceso a Internet. Una
+vez realizada la reserva, la aplicación le retornará un código pdf417 el cual debe
+presentarse en la combi antes de viajar para validar su boleto.
 
-_Segunda parte: Validación y acreditación del viaje_
-- Lector de codigo pdf417 formado por una raspberry pi y una camara USB.
-- Dentro de cada combi se contara con este dispositivo, el cual decodificará el codigo de barras y verificará la validez del pasaje.
+- __Leer el código__ que tiene del usuario. Este código será descifrado para obtener
+la información correspondiente a la reserva y permitirá verificar si la misma es
+válida y, así, acreditar o no el viaje del usuario.
 
 
 :books: Para mas información dirigirse a la wiki del projecto.
